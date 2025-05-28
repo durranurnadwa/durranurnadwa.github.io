@@ -3,165 +3,200 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Durra Nur Nadwa | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <title>Durra Nur Nadwa Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #111;
+      color: #f0f0f0;
+    }
+    header, section, footer {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h1, h2, h3 {
+      color: #0ff;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      list-style: none;
+      padding: 0;
+    }
+    nav a {
+      text-decoration: none;
+      color: #f0f0f0;
+    }
+    .grid {
+      display: grid;
+      gap: 1rem;
+    }
+    .grid-2 {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+    .progress-bar {
+      background-color: #333;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      background-color: #0ff;
+      height: 10px;
+      width: 0;
+      animation: fillProgress 2s forwards;
+    }
+    @keyframes fillProgress {
+      to {
+        width: var(--value);
+      }
+    }
+    .timeline-item {
+      margin-bottom: 1rem;
+      border-left: 2px solid #0ff;
+      padding-left: 1rem;
+    }
+    form input, form textarea {
+      display: block;
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border: none;
+      border-radius: 5px;
+    }
+    form button {
+      background-color: #0ff;
+      color: #000;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .download-cv {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .download-cv a {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background-color: #0ff;
+      color: #000;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-  <header data-aos="fade-down">
-    <h1>Durra Nur Nadwa</h1>
-    <p>Senior Programmer | PHP, Flutter, Laravel, Kotlin</p>
+
+  <header>
+    <h1>Durra Nur Nadwa Binti Roslaili</h1>
+    <p>Senior Programmer</p>
+    <nav>
+      <ul>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="download-cv">
+      <a href="Durra_Nur_Nadwa_CV.pdf" download>Download CV</a>
+    </div>
   </header>
 
-  <section id="cv" style="color: #ddd; padding: 40px; max-width: 900px; margin: auto; font-family: Arial, sans-serif;">
-  <h2 style="color: #f39c12; border-bottom: 2px solid #f39c12; padding-bottom: 8px;">Curriculum Vitae</h2>
-  
-  <div style="margin-top: 20px;">
-    <h3>DURRA NUR NADWA BINTI ROSLAILI</h3>
-    <p><strong>Senior Programmer</strong></p>
-    <p>Gombak, Kuala Lumpur</p>
-    <p>Phone: +6013 731 3558 | Email: <a href="mailto:durrawawa@gmail.com" style="color:#f39c12;">durrawawa@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/durranurnadwa/" target="_blank" style="color:#f39c12;">linkedin.com/in/durranurnadwa</a></p>
-  </div>
-  
-  <section style="margin-top: 30px;">
-    <h3 style="color:#f39c12;">Profile</h3>
-    <p>Experienced Senior Programmer with 9+ years managing the full Software Development Life Cycle (SDLC), including software development, project planning, team coordination, documentation, testing, and implementation. Skilled in leading development efforts, conducting UAT/FAT, creating URS/SRS documents, and training users. Strong problem-solver focused on improving workflows and delivering high-quality software solutions.</p>
+  <section id="profile">
+    <h2>Profile</h2>
+    <p>Experienced Senior Programmer with 9+ years managing the full Software Development Life Cycle (SDLC), designing innovative software solutions, and delivering high-quality code to meet business requirements. Passionate about continuous learning and supporting cross-functional teams.</p>
   </section>
-  
-  <section style="margin-top: 30px;">
-    <h3 style="color:#f39c12;">Skills</h3>
-    <ul>
-      <li>Programming: PHP, JavaScript, HTML, XML, CSS, Kotlin</li>
-      <li>Frameworks & Libraries: Laravel, Bootstrap, jQuery</li>
-      <li>Mobile Development: Flutter</li>
-      <li>Database: MySQL, MSSQL, Oracle</li>
-      <li>Testing & QA: UAT, FAT, test script creation</li>
-      <li>Technical Support: Troubleshooting, user training</li>
-    </ul>
-  </section>
-  
-  <section style="margin-top: 30px;">
-    <h3 style="color:#f39c12;">Work Experience</h3>
-    <h4>Senior Programmer cum Application Support — Selia Ekuiti Sdn Bhd (2019 - Present)</h4>
-    <ul>
-      <li>Designed, developed, and maintained internal systems to improve operational efficiency and support evolving business needs.</li>
-      <li>Led automation projects to streamline recurring workflows, reducing manual tasks and increasing productivity.</li>
-      <li>Oversaw UAT/FAT phases, delivering Train-the-Trainer sessions.</li>
-      <li>Created detailed technical documentation including test plans, URS, SRS, and user guides.</li>
-      <li>Collaborated with cross-functional teams from requirements gathering to deployment.</li>
-      <li>Provided hands-on technical support, ensuring rapid issue resolution.</li>
-      <li>Coordinated with stakeholders to ensure successful project delivery and system performance.</li>
-      <li>Continuously improved system functionality and UI/UX for enhanced user satisfaction.</li>
-    </ul>
-    
-    <h4>Software Engineer — Microcorp Sdn Bhd (2015 - 2019)</h4>
-    <ul>
-      <li>Led software design and full-cycle development to deliver client solutions.</li>
-      <li>Implemented new features and maintained existing systems.</li>
-      <li>Provided technical support for troubleshooting and deployment.</li>
-      <li>Mentored interns and junior developers to improve team productivity.</li>
-      <li>Delivered user training sessions to increase software adoption.</li>
-      <li>Participated in code reviews and technical discussions.</li>
-      <li>Maintained thorough system documentation.</li>
-    </ul>
-  </section>
-  
-  <section style="margin-top: 30px;">
-    <h3 style="color:#f39c12;">Recognition</h3>
-    <p>Professional Technologist Certification Number: PT22100585 (MBOT, Obtained October 2022, Renewable Annually)</p>
-  </section>
-  
-  <section style="margin-top: 30px;">
-    <h3 style="color:#f39c12;">Professional Development</h3>
-    <ul>
-      <li>Laravel Training (Master) – April 2025</li>
-      <li>Laravel Training (Advanced) – January 2024</li>
-      <li>Laravel Training (Beginner) – March 2023</li>
-      <li>Mobile Apps Development – October 2022</li>
-      <li>Applied Data Engineering – September 2022</li>
-      <li>Mobile Application Development (Flutter) – March 2022</li>
-      <li>Android Pro Development (Kotlin) – October 2019</li>
-      <li>Certified jQuery Developer – June 2014</li>
-      <li>Certified PHP Developer – February 2014</li>
-    </ul>
-  </section>
-  
-  <section style="margin-top: 30px;">
-    <h3 style="color:#f39c12;">Leadership</h3>
-    <ul>
-      <li>Exco of Discipline and Spirituality for Student Representative Council (2014/2015)</li>
-      <li>President of Kelab Perdagangan, Ekonomi Asas dan Prinsip Akaun (2008-2009)</li>
-      <li>Vice President of Rumah Sukan Temenggong (2008)</li>
-      <li>Participant in Perbahasan ala Parlimen peringkat Daerah (2008-2009)</li>
-      <li>Secretary for School Librarian in 2006</li>
-    </ul>
-  </section>
-  
-  <section style="margin-top: 30px;">
-    <h3 style="color:#f39c12;">References</h3>
-    <p><strong>Noor Azima binti Abd Aziz</strong> - +6019 5181801 - <a href="mailto:azima@ivymatrix.com.my" style="color:#f39c12;">azima@ivymatrix.com.my</a></p>
-    <p><strong>Nurul Sakinah binti Muhamad Mahadi</strong> - +017 9022436 - <a href="mailto:sakinah.mahadi@datamationgroup.com" style="color:#f39c12;">sakinah.mahadi@datamationgroup.com</a></p>
-  </section>
-  
-  <section style="margin-top: 30px;">
-    <h3 style="color:#f39c12;">Education</h3>
-    <ul>
-      <li>Universiti Teknologi Malaysia — Master of Software Engineering (Graduation: November 2024)</li>
-      <li>Universiti Teknikal Malaysia Melaka — Degree of Computer Science (Database Management) (Graduation: October 2015)</li>
-      <li>SMK Kelapa Sawit — Sijil Pelajaran Malaysia (Graduation: 2009)</li>
-    </ul>
-  </section>
-</section>
 
-
-  <section id="projects" data-aos="fade-up">
-    <h2>💻 My Projects</h2>
-    <div class="project-grid">
-      <div class="project" data-aos="zoom-in">
-        <img src="images/rems.png" alt="REMS Project">
-        <h4>REMS – KWSP Audit System</h4>
-        <p>System for auditing and asset condition evaluation. Built as SME for project module.</p>
-        <a href="#">GitHub</a>
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="grid grid-2">
+      <div>
+        <h3>PHP</h3>
+        <div class="progress-bar"><div class="progress-fill" style="--value: 90%;"></div></div>
       </div>
-      <div class="project" data-aos="zoom-in">
-        <img src="images/budget-monitoring.png" alt="Budget Project">
-        <h4>Contractor Budget Monitoring</h4>
-        <p>Laravel system to track monthly budgets by contractor and routine.</p>
-        <a href="#">GitHub</a>
+      <div>
+        <h3>JavaScript</h3>
+        <div class="progress-bar"><div class="progress-fill" style="--value: 85%;"></div></div>
       </div>
-      <div class="project" data-aos="zoom-in">
-        <img src="images/project3.png" alt="Project 3">
-        <h4>Asset Tracking App</h4>
-        <p>Flutter-based app for real-time asset tracking integrated with Firebase.</p>
-        <a href="#">GitHub</a>
+      <div>
+        <h3>Laravel</h3>
+        <div class="progress-bar"><div class="progress-fill" style="--value: 90%;"></div></div>
       </div>
-      <div class="project" data-aos="zoom-in">
-        <img src="images/project4.png" alt="Project 4">
-        <h4>Maintenance Scheduling Tool</h4>
-        <p>Internal PHP tool to plan, assign and track maintenance tasks monthly.</p>
-        <a href="#">GitHub</a>
+      <div>
+        <h3>Flutter</h3>
+        <div class="progress-bar"><div class="progress-fill" style="--value: 75%;"></div></div>
       </div>
     </div>
   </section>
 
-  <section id="contact" data-aos="fade-up">
-    <h2>📬 Contact Me</h2>
-    <form action="mailto:your.email@example.com" method="POST" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit">Send Message</button>
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="timeline-item">
+      <h3>Senior Programmer - Selia Ekuiti Sdn Bhd</h3>
+      <p>2019 - Present</p>
+      <p>Developed internal systems, automation projects, UAT/FAT, documentation, and user support.</p>
+    </div>
+    <div class="timeline-item">
+      <h3>Software Engineer - Microcorp Sdn Bhd</h3>
+      <p>2015 - 2019</p>
+      <p>Handled full cycle development, system troubleshooting, intern mentoring, and training delivery.</p>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="timeline-item">
+      <h3>Master of Software Engineering</h3>
+      <p>Universiti Teknologi Malaysia (UTM) - Graduation: 2024</p>
+    </div>
+    <div class="timeline-item">
+      <h3>Bachelor of Computer Science</h3>
+      <p>Universiti Teknikal Malaysia Melaka (UTeM) - Graduation: 2015</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p><i class="fa fa-envelope"></i> durrawawa@gmail.com</p>
+    <p><i class="fa fa-phone"></i> +6013 731 3558</p>
+    <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/durranurnadwa/" target="_blank" style="color: #0ff;">LinkedIn</a></p>
+    <form id="contactForm">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
     </form>
   </section>
 
-  <footer data-aos="fade-up">
-    <p>📫 Email: your.email@example.com | <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></p>
+  <footer>
+    <p>&copy; 2025 Durra Nur Nadwa. All rights reserved.</p>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
-    AOS.init();
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault(); // Prevent form from submitting
+
+      this.reset(); // Optional: clear the form
+
+      const message = document.createElement('p');
+      message.textContent = "Thank you! Your message has been sent.";
+      message.style.color = "#0f0";
+      message.style.marginTop = "1rem";
+
+      this.appendChild(message);
+
+      setTimeout(() => {
+        message.remove();
+      }, 5000);
+    });
   </script>
 </body>
 </html>
