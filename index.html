@@ -1,406 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Durra Nur Nadwa Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-<style>
-  /* Reset & base */
-  * {
-    box-sizing: border-box;
-  }
-  body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: #111;
-    color: #eee;
-    line-height: 1.5;
-  }
-  a {
-    color: #f5d76e; /* soft yellow */
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-
-  header {
-    text-align: center;
-    padding: 3rem 1rem 2rem;
-    border-bottom: 1px solid #444;
-  }
-  header h1 {
-    margin: 0 0 0.3rem;
-    font-weight: 700;
-    color: #f5d76e; /* soft yellow */
-    font-size: 2.8rem;
-    letter-spacing: 1px;
-  }
-  header p {
-    margin: 0;
-    font-weight: 500;
-    font-size: 1.2rem;
-    color: #ccc;
-  }
-
-  /* Navigation */
-  nav {
-    margin: 1.5rem 0;
-  }
-  nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    max-width: 600px;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-  }
-  nav a {
-    font-weight: 600;
-    font-size: 1rem;
-    color: #ddd;
-    transition: color 0.3s;
-  }
-  nav a:hover {
-    color: #f5d76e;
-  }
-
-  /* Container for sections with boxes side-by-side */
-  .container {
-    max-width: 1000px;
-    margin: 2rem auto 4rem;
-    padding: 0 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.8rem;
-    justify-content: center;
-  }
-  .box {
-    background: #222;
-    border-radius: 8px;
-    padding: 1.6rem 1.8rem;
-    box-shadow: 0 0 12px rgba(245, 215, 110, 0.15);
-    flex: 1 1 320px;
-    max-width: 450px;
-    color: #eee;
-    position: relative;
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeInUp 0.8s forwards;
-  }
-  .box:nth-child(1) { animation-delay: 0.15s; }
-  .box:nth-child(2) { animation-delay: 0.3s; }
-  .box:nth-child(3) { animation-delay: 0.45s; }
-  .box:nth-child(4) { animation-delay: 0.6s; }
-  .box:nth-child(5) { animation-delay: 0.75s; }
-  .box:hover {
-    box-shadow: 0 0 24px rgba(245, 215, 110, 0.5);
-    transform: translateY(0) scale(1.03);
-    transition: all 0.3s ease;
-  }
-  @keyframes fadeInUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Durra Nur Nadwa Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <style>
+    :root {
+      --main-color: #f1c40f;
+      --bg-dark: #1a1a1a;
+      --text-light: #f5f5f5;
+      --box-bg: #2a2a2a;
     }
-  }
 
-  /* Section titles */
-  section h2 {
-    color: #f5d76e;
-    text-align: center;
-    font-size: 2rem;
-    margin-top: 0;
-  }
-
-  /* Experience & Education headings */
-  .box h3 {
-    margin-top: 0;
-    color: #f5d76e;
-  }
-  .box p {
-    margin: 0.4rem 0 1rem;
-  }
-
-  /* Projects images */
-  .project-image {
-    width: 100%;
-    border-radius: 6px;
-    margin-top: 0.8rem;
-    box-shadow: 0 0 8px rgba(0,0,0,0.5);
-    object-fit: cover;
-    height: 160px;
-  }
-
-  /* Skills and Certifications lists */
-  ul.skills-list,
-  ul.cert-list {
-    padding-left: 1.3rem;
-    margin: 0;
-    list-style-type: disc;
-    color: #eee;
-  }
-  ul.skills-list li,
-  ul.cert-list li {
-    margin-bottom: 0.6rem;
-    font-weight: 500;
-  }
-
-  /* Contact section */
-  #contact {
-    max-width: 600px;
-    margin: 0 auto 4rem;
-    padding: 1rem;
-    background: #222;
-    border-radius: 8px;
-    box-shadow: 0 0 12px rgba(245, 215, 110, 0.15);
-  }
-  #contact h2 {
-    text-align: center;
-    color: #f5d76e;
-    margin-bottom: 1rem;
-  }
-  #contact p {
-    text-align: center;
-    margin: 0.3rem 0;
-    color: #ddd;
-    font-size: 1rem;
-  }
-  #contact form {
-    margin-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  #contact input, #contact textarea {
-    padding: 0.6rem 0.8rem;
-    border-radius: 5px;
-    border: none;
-    font-size: 1rem;
-    resize: vertical;
-  }
-  #contact input:focus, #contact textarea:focus {
-    outline: 2px solid #f5d76e;
-  }
-  #contact button {
-    background-color: #f5d76e;
-    border: none;
-    padding: 0.8rem 1rem;
-    font-weight: 700;
-    color: #111;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
-  #contact button:hover {
-    background-color: #d4b549;
-  }
-
-  /* Success message */
-  #success-message {
-    display: none;
-    text-align: center;
-    margin-top: 1rem;
-    color: #b6d86f;
-    font-weight: 600;
-  }
-
-  /* Download CV & QR Code */
-  .bottom-section {
-    max-width: 600px;
-    margin: 0 auto 3rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-  }
-  .download-cv a {
-    background-color: #f5d76e;
-    color: #111;
-    padding: 0.7rem 1.4rem;
-    font-weight: 700;
-    border-radius: 6px;
-    text-decoration: none;
-    box-shadow: 0 0 12px rgba(245, 215, 110, 0.3);
-    transition: background-color 0.3s;
-  }
-  .download-cv a:hover {
-    background-color: #d4b549;
-  }
-  .qr-code img {
-    width: 110px;
-    height: 110px;
-    border-radius: 8px;
-    box-shadow: 0 0 12px rgba(245, 215, 110, 0.3);
-  }
-  .qr-caption {
-    color: #ccc;
-    text-align: center;
-    margin-top: 0.4rem;
-    font-size: 0.9rem;
-  }
-
-  /* Responsive adjustments */
-  @media (max-width: 700px) {
-    .container {
-      flex-direction: column;
-      align-items: center;
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      scroll-behavior: smooth;
     }
-    .bottom-section {
-      flex-direction: column;
+
+    header {
+      background-color: var(--main-color);
+      color: black;
+      padding: 2rem;
+      text-align: center;
     }
-  }
-</style>
+
+    section {
+      padding: 2rem;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .flex-container {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      background-color: var(--box-bg);
+      padding: 1rem;
+      border-radius: 8px;
+      flex: 1;
+      min-width: 300px;
+      transition: transform 0.3s ease;
+    }
+
+    .box:hover {
+      transform: translateY(-10px);
+    }
+
+    .project-img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: none;
+      border-radius: 4px;
+    }
+
+    .contact-form button {
+      background-color: var(--main-color);
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #111;
+    }
+  </style>
 </head>
+
 <body>
+  <header>
+    <h1>Durra Nur Nadwa</h1>
+    <p>Software Programmer</p>
+  </header>
 
-<header>
-  <h1>Durra Nur Nadwa Binti Roslaili</h1>
-  <p>Senior Programmer</p>
-  <nav>
-    <ul>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-<main>
-
-  <!-- Experience -->
   <section id="experience">
-    <h2>Experience</h2>
-    <div class="container">
-      <article class="box" style="animation-delay: 0.1s;">
-        <h3>Senior Programmer cum Application Support</h3>
-        <p><strong>Selia Ekuiti Sdn Bhd</strong> <br />Jan 2019 – Present</p>
-        <ul>
-          <li>Analyze user needs and design software solutions</li>
-          <li>Maintain and support existing applications</li>
-          <li>Lead development projects and mentor junior programmers</li>
-        </ul>
-      </article>
-
-      <article class="box" style="animation-delay: 0.2s;">
+    <h2 class="section-title">Experience & Education</h2>
+    <div class="flex-container">
+      <div class="box animate__animated animate__fadeInUp">
+        <h3>Senior Programmer & Application Support</h3>
+        <p><strong>Selia Ekuiti Sdn Bhd (Jan 2019 - Present)</strong><br>
+        Working on budget management system, contractor management, reporting modules. Supporting system users and maintaining in-house software.</p>
+      </div>
+      <div class="box animate__animated animate__fadeInUp">
         <h3>Software Engineer</h3>
-        <p><strong>Microcorp Sdn Bhd</strong> <br />Mar 2015 – Jan 2019</p>
-        <ul>
-          <li>Developed web-based applications using PHP, Laravel, and JavaScript</li>
-          <li>Collaborated with cross-functional teams for project delivery</li>
-          <li>Performed code reviews and ensured quality standards</li>
-        </ul>
-      </article>
+        <p><strong>Microcorp Sdn Bhd (Mar 2015 - Jan 2019)</strong><br>
+        Developed various web apps using PHP and JavaScript. Implemented new features and handled bug fixes.</p>
+      </div>
+      <div class="box animate__animated animate__fadeInUp">
+        <h3>Education</h3>
+        <p><strong>Master's in Software Engineering</strong><br>Razak Faculty of Technology and Informatics</p>
+      </div>
     </div>
   </section>
 
-  <!-- Education -->
-  <section id="education">
-    <h2>Education</h2>
-    <div class="container">
-      <article class="box">
-        <h3>Master's in Software Engineering</h3>
-        <p><strong>Razak Faculty of Technology and Informatics</strong></p>
-        <p>Graduated: August 2024</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- Skills -->
   <section id="skills">
-    <h2>Technical Skills</h2>
-    <div class="container">
-      <article class="box">
-        <ul class="skills-list">
-          <li>PHP (Laravel)</li>
-          <li>JavaScript (jQuery, Bootstrap)</li>
-          <li>HTML5 & CSS3</li>
-          <li>Flutter & Kotlin (Mobile App Development)</li>
-          <li>Database Design and Management (MySQL)</li>
+    <h2 class="section-title">Skills & Certifications</h2>
+    <div class="flex-container">
+      <div class="box animate__animated animate__fadeInUp">
+        <h3>Skills</h3>
+        <ul>
+          <li>PHP</li>
+          <li>JavaScript</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Flutter</li>
+          <li>Kotlin</li>
+          <li>Laravel</li>
+          <li>Bootstrap</li>
+          <li>jQuery</li>
         </ul>
-      </article>
+      </div>
+      <div class="box animate__animated animate__fadeInUp">
+        <h3>Certifications</h3>
+        <ul>
+          <li>Recognition from MBOT (Malaysia Board of Technologists)</li>
+        </ul>
+      </div>
     </div>
   </section>
 
-  <!-- Certifications -->
-  <section id="certifications">
-    <h2>Certifications</h2>
-    <div class="container">
-      <article class="box">
-        <ul class="cert-list">
-          <li>Malaysian Board of Technologists (MBOT) Recognition</li>
-          <li>Professional Software Developer Certification</li>
-        </ul>
-      </article>
-    </div>
-  </section>
-
-  <!-- Projects -->
   <section id="projects">
-    <h2>Projects</h2>
-    <div class="container">
-      <article class="box">
-        <h3>KWSP Real Estate Management System (REMS)</h3>
-        <p>Role: SME for Project Management Module</p>
-        <p>Features include condition evaluation, building audits, and repair work assessment.</p>
-        <img src="https://via.placeholder.com/400x160?text=REMS+Dashboard" alt="REMS Dashboard" class="project-image" />
-      </article>
-
-      <article class="box">
-        <h3>Web Applications Portfolio</h3>
-        <p>Developed various web-based applications using Laravel and Bootstrap frameworks.</p>
-        <img src="https://via.placeholder.com/400x160?text=Web+App+Screenshot" alt="Web Application" class="project-image" />
-      </article>
+    <h2 class="section-title">Projects</h2>
+    <div class="flex-container">
+      <div class="box animate__animated animate__fadeInUp">
+        <img src="images/project1.png" alt="Project Screenshot" class="project-img">
+        <h3>KWSP REMS - Real Estate Management System</h3>
+        <p>Module for managing building audits and repair work evaluation. SME for project management functionalities.</p>
+      </div>
+      <!-- Add more projects similarly -->
     </div>
   </section>
 
-  <!-- Contact -->
   <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:durra.nur@example.com">durra.nur@example.com</a></p>
-    <p>Phone: +60 12-345 6789</p>
-
-    <form id="contact-form" aria-label="Contact form">
-      <input type="text" id="name" name="name" placeholder="Your Name" required />
-      <input type="email" id="email" name="email" placeholder="Your Email" required />
-      <textarea id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
+    <h2 class="section-title">Contact Me</h2>
+    <form class="contact-form" onsubmit="showMsg(event)">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">Submit</button>
     </form>
-    <div id="success-message" role="alert">Thank you for your message. I'll get back to you soon!</div>
+    <p id="form-msg"></p>
   </section>
 
-  <section class="bottom-section" aria-label="Download CV and QR code">
-    <div class="download-cv">
-      <a href="/path/to/Durra_Nur_Nadwa_Resume.pdf" download>Download CV</a>
-    </div>
-    <div class="qr-code">
-      <img src="https://via.placeholder.com/110?text=QR+Code" alt="QR Code to LinkedIn profile" />
-      <div class="qr-caption">Scan QR code to connect on LinkedIn</div>
+  <section id="extras">
+    <h2 class="section-title">Download & Connect</h2>
+    <div class="flex-container">
+      <div class="box">
+        <a href="cv-durra.pdf" download class="btn">Download My CV</a>
+      </div>
+      <div class="box">
+        <img src="images/linkedin-qr.png" alt="LinkedIn QR Code" width="150">
+        <p>Scan to connect on LinkedIn</p>
+      </div>
     </div>
   </section>
 
-</main>
+  <footer>
+    <p>&copy; 2025 Durra Nur Nadwa. All rights reserved.</p>
+  </footer>
 
-<script>
-  // Simple contact form success message simulation
-  const form = document.getElementById('contact-form');
-  const successMessage = document.getElementById('success-message');
-
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    // Normally here you would send the data via AJAX or similar
-    form.reset();
-    successMessage.style.display = 'block';
-    setTimeout(() => successMessage.style.display = 'none', 5000);
-  });
-</script>
-
+  <script>
+    function showMsg(e) {
+      e.preventDefault();
+      document.getElementById('form-msg').innerText = "Thank you for contacting me. I will get back to you soon!";
+    }
+  </script>
 </body>
+
 </html>
