@@ -148,6 +148,20 @@
       color: #ffffff;
     }
 
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .tab-button.active {
+      background-color: #007bff;
+      color: white;
+    }
+
+
   </style>
 </head>
 <body>
@@ -262,6 +276,20 @@
       document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
       document.getElementById(tabId).classList.add('active');
       event.target.classList.add('active');
+    }
+
+    function openTab(evt, tabId) {
+      // Hide all tab contents
+      const tabContents = document.querySelectorAll(".tab-content");
+      tabContents.forEach(content => content.classList.remove("active"));
+
+      // Remove active class from all buttons
+      const tabButtons = document.querySelectorAll(".tab-button");
+      tabButtons.forEach(btn => btn.classList.remove("active"));
+
+      // Show selected tab
+      document.getElementById(tabId).classList.add("active");
+      evt.currentTarget.classList.add("active");
     }
 
     const toggleBtn = document.getElementById('darkModeToggle');
