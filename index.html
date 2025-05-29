@@ -133,6 +133,43 @@
   line-height: 1.5;
 }
 
+.timeline-horizontal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  margin: 40px 0;
+  padding: 20px 0;
+  border-top: 3px solid #007BFF;
+}
+
+.timeline-item-horizontal {
+  position: relative;
+  width: 180px;
+  margin: 10px 15px;
+  text-align: center;
+}
+
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  background-color: #007BFF;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+  top: -11px;
+}
+
+.timeline-content-horizontal {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 6px;
+  margin-top: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-size: 14px;
+}
+
+
   </style>
 </head>
 <body>
@@ -218,7 +255,63 @@
 
 
   <div id="skills" class="tab-content">
-    <p>Skills and certifications info goes here...</p>
+    <div class="timeline-horizontal">
+  <div class="timeline-item-horizontal">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content-horizontal">
+      <strong>Laravel Training (Master)</strong><br>April 2025
+    </div>
+  </div>
+  <div class="timeline-item-horizontal">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content-horizontal">
+      <strong>Laravel Training (Advanced)</strong><br>January 2024
+    </div>
+  </div>
+  <div class="timeline-item-horizontal">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content-horizontal">
+      <strong>Laravel Training (Beginner)</strong><br>March 2023
+    </div>
+  </div>
+  <div class="timeline-item-horizontal">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content-horizontal">
+      <strong>Mobile Apps Development</strong><br>October 2022
+    </div>
+  </div>
+  <div class="timeline-item-horizontal">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content-horizontal">
+      <strong>Applied Data Engineering</strong><br>September 2022
+    </div>
+  </div>
+  <div class="timeline-item-horizontal">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content-horizontal">
+      <strong>Flutter App Development</strong><br>March 2022
+    </div>
+  </div>
+  <div class="timeline-item-horizontal">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content-horizontal">
+      <strong>Android Pro (Kotlin)</strong><br>October 2019
+    </div>
+  </div>
+  <div class="timeline-item-horizontal">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content-horizontal">
+      <strong>Certified jQuery Developer</strong><br>June 2014
+    </div>
+  </div>
+  <div class="timeline-item-horizontal">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content-horizontal">
+      <strong>Certified PHP Developer</strong><br>February 2014
+    </div>
+  </div>
+</div>
+
   </div>
 </section>
 
