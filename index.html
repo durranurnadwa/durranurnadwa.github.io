@@ -169,76 +169,6 @@
   font-size: 14px;
 }
 
-.year-timeline {
-  position: relative;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  border-top: 3px solid #333;
-  padding: 60px 0;
-  overflow-x: auto;
-  white-space: nowrap;
-}
-
-.timeline-container {
-  position: relative;
-  text-align: center;
-  width: 160px;
-  margin: 0 15px;
-  flex-shrink: 0;
-}
-
-.timeline-dot {
-  width: 14px;
-  height: 14px;
-  background: #333;
-  border-radius: 50%;
-  margin: 0 auto;
-  position: relative;
-  top: -7px;
-}
-
-.timeline-year {
-  margin-top: 6px;
-  font-weight: bold;
-  color: #333;
-}
-
-.timeline-item {
-  width: 180px;
-  padding: 8px;
-  background: #f9f9f9;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-}
-
-.timeline-item h4 {
-  font-size: 14px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.timeline-item p {
-  font-size: 12px;
-  margin: 0;
-  color: #555;
-}
-
-.timeline-item.top {
-  position: absolute;
-  top: -100px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.timeline-item.bottom {
-  position: absolute;
-  top: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-
 
   </style>
 </head>
@@ -325,87 +255,63 @@
 
 
   <div id="skills" class="tab-content">
-    <div class="year-timeline">
-  <div class="timeline-container">
-    <div class="timeline-item top">
-      <h4>Laravel Training (Master)</h4>
-      <p>April 2025</p>
-    </div>
+    <div class="timeline-horizontal">
+  <div class="timeline-item-horizontal">
     <div class="timeline-dot"></div>
-    <div class="timeline-year">2025</div>
+    <div class="timeline-content-horizontal">
+      <strong>Laravel Training (Master)</strong><br>April 2025
+    </div>
   </div>
+  <div class="timeline-item-horizontal">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content-horizontal">
+      <strong>Laravel Training (Advanced)</strong><br>January 2024
+    </div>
+  </div>
+  <div class="timeline-item-horizontal">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content-horizontal">
+      <strong>Laravel Training (Beginner)</strong><br>March 2023
+    </div>
+  </div>
+  <div class="timeline-item-horizontal">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content-horizontal">
+      <strong>Mobile Apps Development</strong><br>October 2022
+    </div>
+  </div>
+  <div class="timeline-item-horizontal">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content-horizontal">
+      <strong>Applied Data Engineering</strong><br>September 2022
+    </div>
+  </div>
+  <div class="timeline-item-horizontal">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content-horizontal">
+      <strong>Flutter App Development</strong><br>March 2022
+    </div>
+  </div>
+  <div class="timeline-item-horizontal">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content-horizontal">
+      <strong>Android Pro (Kotlin)</strong><br>October 2019
+    </div>
+  </div>
+  <div class="timeline-item-horizontal">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content-horizontal">
+      <strong>Certified jQuery Developer</strong><br>June 2014
+    </div>
+  </div>
+  <div class="timeline-item-horizontal">
+    <div class="timeline-dot"></div>
+    <div class="timeline-content-horizontal">
+      <strong>Certified PHP Developer</strong><br>February 2014
+    </div>
+  </div>
+</div>
 
-  <div class="timeline-container">
-    <div class="timeline-item bottom">
-      <h4>Laravel Training (Advanced)</h4>
-      <p>January 2024</p>
-    </div>
-    <div class="timeline-dot"></div>
-    <div class="timeline-year">2024</div>
-  </div>
-
-  <div class="timeline-container">
-    <div class="timeline-item top">
-      <h4>Laravel Training (Beginner)</h4>
-      <p>March 2023</p>
-    </div>
-    <div class="timeline-dot"></div>
-    <div class="timeline-year">2023</div>
-  </div>
-
-  <div class="timeline-container">
-    <div class="timeline-item bottom">
-      <h4>Mobile Apps Development</h4>
-      <p>October 2022</p>
-    </div>
-    <div class="timeline-dot"></div>
-    <div class="timeline-year">2022</div>
-  </div>
-
-  <div class="timeline-container">
-    <div class="timeline-item top">
-      <h4>Applied Data Engineering</h4>
-      <p>September 2022</p>
-    </div>
-    <div class="timeline-dot"></div>
-    <div class="timeline-year">2022</div>
-  </div>
-
-  <div class="timeline-container">
-    <div class="timeline-item bottom">
-      <h4>Mobile App Dev (Flutter)</h4>
-      <p>March 2022</p>
-    </div>
-    <div class="timeline-dot"></div>
-    <div class="timeline-year">2022</div>
-  </div>
-
-  <div class="timeline-container">
-    <div class="timeline-item top">
-      <h4>Android Pro Dev (Kotlin)</h4>
-      <p>October 2019</p>
-    </div>
-    <div class="timeline-dot"></div>
-    <div class="timeline-year">2019</div>
-  </div>
-
-  <div class="timeline-container">
-    <div class="timeline-item bottom">
-      <h4>Certified jQuery Developer</h4>
-      <p>June 2014</p>
-    </div>
-    <div class="timeline-dot"></div>
-    <div class="timeline-year">2014</div>
-  </div>
-
-  <div class="timeline-container">
-    <div class="timeline-item top">
-      <h4>Certified PHP Developer</h4>
-      <p>February 2014</p>
-    </div>
-    <div class="timeline-dot"></div>
-    <div class="timeline-year">2014</div>
-  </div>
 </div>
 
   </div>
