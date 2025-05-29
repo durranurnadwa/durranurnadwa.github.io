@@ -84,6 +84,70 @@
     .section-content {
       margin-top: 5px;
     }
+
+    .timeline {
+      list-style: none;
+      padding: 0;
+      position: relative;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #ccc;
+    }
+    .timeline li {
+      position: relative;
+      padding-left: 60px;
+      margin-bottom: 40px;
+    }
+    .timeline-icon {
+      position: absolute;
+      left: 8px;
+      top: 0;
+      width: 25px;
+      height: 25px;
+      background: #007bff;
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 25px;
+      font-size: 12px;
+    }
+    .timeline-content {
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 6px;
+      border-left: 5px solid #007bff;
+    }
+    .timeline-date {
+      font-size: 0.9em;
+      color: #666;
+      margin-top: 5px;
+    }
+
+    .dark-mode {
+      background-color: #121212 !important;
+      color: #ffffff !important;
+    }
+
+    .dark-mode .timeline-content {
+      background-color: #1e1e1e;
+      border-left-color: #90caf9;
+    }
+
+    .dark-mode .timeline-icon {
+      background: #90caf9;
+      color: #000;
+    }
+
+    .dark-mode a, .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4 {
+      color: #ffffff;
+    }
+
   </style>
 </head>
 <body>
@@ -91,6 +155,15 @@
     <h1>Durra Nur Nadwa binti Roslaili 6688</h1>
     <p>Senior Programmer</p>
   </header>
+
+  <button id="darkModeToggle" class="btn btn-sm btn-outline-secondary">
+    <i class="fas fa-moon"></i> Toggle Dark Mode
+  </button>
+  <a href="assets/DurraNurNadwa_Resume.pdf" download class="btn btn-primary">
+    <i class="fas fa-download"></i> Download Resume
+  </a>
+
+
 
   <section class="core-expertise">
     <div class="expertise-box">
@@ -122,18 +195,64 @@
       <!-- Add more projects as needed -->
     </div>
 
-    <div class="tab-content" id="experience">
-      <h2>Work Experience</h2>
-      <div class="section-title">Senior Programmer – Selia Ekuiti Sdn Bhd (2019–present)</div>
-      <div class="section-content">Led system development, automation, documentation, and stakeholder coordination.</div>
+    <!-- Work Experience & Education Tab -->
+  <div class="tab-pane fade" id="work-edu" role="tabpanel" aria-labelledby="work-edu-tab">
+    <div class="container py-4">
+      <!-- Work Experience Timeline -->
+      <h3 class="mb-4">Work Experience</h3>
+      <ul class="timeline">
+        <li>
+          <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
+          <div class="timeline-content">
+            <h4>Senior Programmer cum Application Support</h4>
+            <p class="timeline-date">Selia Ekuiti Sdn Bhd | 2019 – Present</p>
+            <ul>
+              <li>Led automation projects and system improvements.</li>
+              <li>Handled UAT/FAT, documentation, and user training.</li>
+              <li>Supported cross-functional development and system delivery.</li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
+          <div class="timeline-content">
+            <h4>Software Engineer</h4>
+            <p class="timeline-date">Microcorp Sdn Bhd | 2015 – 2019</p>
+            <ul>
+              <li>Delivered full-cycle software development and upgrades.</li>
+              <li>Provided support, mentored juniors, and led training sessions.</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
 
-      <div class="section-title">Software Engineer – Microcorp Sdn Bhd (2015–2019)</div>
-      <div class="section-content">Handled full-cycle development, system support, mentoring, and technical documentation.</div>
-
-      <h2>Education</h2>
-      <div class="section-title">UTM – Master of Software Engineering (Expected Nov 2024)</div>
-      <div class="section-title">UTeM – BSc in Computer Science (DB Management), CGPA: 3.16 (2015)</div>
+      <!-- Education Timeline -->
+      <h3 class="mt-5 mb-4">Education</h3>
+      <ul class="timeline">
+        <li>
+          <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
+          <div class="timeline-content">
+            <h4>Universiti Teknologi Malaysia</h4>
+            <p class="timeline-date">Master of Software Engineering<br>Graduation: November 2024 | CGPA: 4.00</p>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
+          <div class="timeline-content">
+            <h4>Universiti Teknikal Malaysia Melaka</h4>
+            <p class="timeline-date">Degree in Computer Science (Database Management)<br>Graduation: October 2015 | CGPA: 3.16</p>
+          </div>
+        </li>
+        <li>
+          <div class="timeline-icon"><i class="fas fa-school"></i></div>
+          <div class="timeline-content">
+            <h4>SMK Kelapa Sawit</h4>
+            <p class="timeline-date">Sijil Pelajaran Malaysia (SPM)<br>Graduation: 2009 | Result: 1A+ 2A 2A- 5C+</p>
+          </div>
+        </li>
+      </ul>
     </div>
+  </div>
 
     <div class="tab-content" id="skills">
       <h2>Skills</h2>
@@ -160,6 +279,24 @@
       document.getElementById(tabId).classList.add('active');
       event.target.classList.add('active');
     }
+
+    const toggleBtn = document.getElementById('darkModeToggle');
+    const body = document.body;
+
+    // Load mode from localStorage
+    if (localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark-mode');
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+      } else {
+        localStorage.setItem('theme', 'light');
+      }
+    });
+
   </script>
 </body>
 </html>
