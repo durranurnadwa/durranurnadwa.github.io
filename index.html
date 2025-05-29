@@ -3,115 +3,163 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Durra Nur Nadwa Binti Roslaili | Senior Programmer</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <title>Durra Nur Nadwa – Professional Profile</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7f7f7;
+      color: #333;
+    }
+
+    header {
+      background: #800000;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .core-expertise {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin: 20px;
+      flex-wrap: wrap;
+    }
+
+    .expertise-box {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      flex: 1;
+      min-width: 220px;
+      max-width: 300px;
+    }
+
+    .tabs {
+      margin: 30px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .tab-buttons {
+      display: flex;
+      background: #e0e0e0;
+    }
+
+    .tab-buttons button {
+      flex: 1;
+      padding: 15px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .tab-buttons button.active {
+      background: white;
+      border-bottom: 3px solid #800000;
+      color: #800000;
+    }
+
+    .tab-content {
+      display: none;
+      padding: 20px;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    .section-content {
+      margin-top: 5px;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Durra Nur Nadwa Binti Roslaili 123</h1>
-      <h2>Senior Programmer</h2>
-    </header>
-    <section>
-      <h2><i class="fas fa-briefcase"></i> Experience</h2>
-      <div class="box-grid">
-        <div class="box">
-          <h3>Senior Programmer — Selia Ekuiti Sdn Bhd (2019 – Present)</h3>
-          <ul>
-            <li>Led and developed internal software systems for workflow automation.</li>
-            <li>Managed UAT and FAT phases ensuring smooth deployment.</li>
-            <li>Created technical documentation and user manuals.</li>
-            <li>Provided ongoing support and troubleshooting.</li>
-            <li>Coordinated with teams and mentored junior programmers.</li>
-          </ul>
-        </div>
-        <div class="box">
-          <h3>Software Engineer — Microcorp Sdn Bhd (2015 – 2019)</h3>
-          <ul>
-            <li>Handled full SDLC from requirements to deployment.</li>
-            <li>Built backend services with PHP & Laravel.</li>
-            <li>Improved system stability through bug fixing.</li>
-            <li>Mentored interns and juniors through knowledge sharing.</li>
-          </ul>
-        </div>
+  <header>
+    <h1>Durra Nur Nadwa binti Roslaili 6688</h1>
+    <p>Senior Programmer</p>
+  </header>
+
+  <section class="core-expertise">
+    <div class="expertise-box">
+      <h3>Software Development</h3>
+      <p>Full SDLC experience, from requirements to deployment, with strong documentation and user training.</p>
+    </div>
+    <div class="expertise-box">
+      <h3>Programming & Frameworks</h3>
+      <p>PHP, JavaScript, Kotlin, Flutter, Laravel, jQuery, Bootstrap – proficient in web & mobile development.</p>
+    </div>
+    <div class="expertise-box">
+      <h3>Technical Support & QA</h3>
+      <p>UAT/FAT coordination, bug fixing, troubleshooting, and mentoring for smooth project handovers.</p>
+    </div>
+  </section>
+
+  <section class="tabs">
+    <div class="tab-buttons">
+      <button class="active" onclick="showTab('project')">Projects</button>
+      <button onclick="showTab('experience')">Work Exp & Edu</button>
+      <button onclick="showTab('skills')">Skills & Certificates</button>
+    </div>
+    <div class="tab-content active" id="project">
+      <h2>Projects</h2>
+      <div class="section-title">KWSP REMS</div>
+      <div class="section-content">
+        Acted as SME for project module. Managed audits & repairs workflows, ensured compliance, and user training.
       </div>
-    </section>
-    <section>
-      <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-      <div class="box-grid">
-        <div class="box"><strong>Master of Software Engineering</strong> — UTM, Graduated 2024</div>
-        <div class="box"><strong>Bachelor of Computer Science</strong> — UTeM, Graduated 2015</div>
-      </div>
-    </section>
-    <section>
-      <h2><i class="fas fa-code"></i> Skills</h2>
-      <div class="box-grid">
-        <div class="box">PHP</div><div class="box">JavaScript</div><div class="box">Laravel</div>
-        <div class="box">Flutter</div><div class="box">HTML</div><div class="box">CSS</div>
-        <div class="box">Kotlin</div><div class="box">Bootstrap</div><div class="box">jQuery</div>
-      </div>
-    </section>
-    <section>
-      <h2><i class="fas fa-certificate"></i> Certifications</h2>
-      <div class="box-grid">
-        <div class="box">Certified Technologist — MBOT</div>
-        <div class="box">Laravel Training (Master) – Apr 2025</div>
-        <div class="box">Laravel Training (Advanced) – Jan 2024</div>
-        <div class="box">Laravel Training (Beginner) – Mar 2023</div>
-        <div class="box">Mobile Apps Development – Oct 2022</div>
-        <div class="box">Applied Data Engineering – Sep 2022</div>
-        <div class="box">Flutter Mobile Dev – Mar 2022</div>
-        <div class="box">Android Pro Dev (Kotlin) – Oct 2019</div>
-        <div class="box">Certified jQuery Dev – Jun 2014</div>
-        <div class="box">Certified PHP Dev – Feb 2014</div>
-      </div>
-    </section>
-    <section>
-      <h2><i class="fas fa-folder-open"></i> Projects</h2>
-      <div class="box-grid">
-        <div class="box">
-          <h3>KWSP REMS</h3>
-          <p>SME for project management module. Implemented audit and repair workflows.</p>
-          <img src="assets/rems-placeholder.png" alt="REMS screenshot" width="100%" />
-        </div>
-        <div class="box">
-          <h3>Internal Automation Projects</h3>
-          <p>Developed tools for business ops, resource management, and automation.</p>
-          <img src="assets/internal-placeholder.png" alt="Internal system screenshot" width="100%" />
-        </div>
-      </div>
-    </section>
-    <section>
-      <h2><i class="fas fa-envelope"></i> Contact</h2>
-      <form>
-        <input type="text" placeholder="Name" required />
-        <input type="email" placeholder="Email" required />
-        <textarea placeholder="Message" required></textarea>
-        <button type="submit">Send</button>
-        <div id="success-message">Thank you for contacting me. I will get back to you shortly.</div>
-      </form>
-    </section>
-    <section class="qr-code">
-      <a class="download-cv" href="assets/Durra_Nur_Nadwa_CV.pdf" download>Download CV</a>
-      <div class="qr-code">
-        <img src="assets/linkedin-qr.png" alt="LinkedIn QR Code" />
-        <p>Scan to view LinkedIn Profile</p>
-      </div>
-    </section>
-  </div>
+      <!-- Add more projects as needed -->
+    </div>
+
+    <div class="tab-content" id="experience">
+      <h2>Work Experience</h2>
+      <div class="section-title">Senior Programmer – Selia Ekuiti Sdn Bhd (2019–present)</div>
+      <div class="section-content">Led system development, automation, documentation, and stakeholder coordination.</div>
+
+      <div class="section-title">Software Engineer – Microcorp Sdn Bhd (2015–2019)</div>
+      <div class="section-content">Handled full-cycle development, system support, mentoring, and technical documentation.</div>
+
+      <h2>Education</h2>
+      <div class="section-title">UTM – Master of Software Engineering (Expected Nov 2024)</div>
+      <div class="section-title">UTeM – BSc in Computer Science (DB Management), CGPA: 3.16 (2015)</div>
+    </div>
+
+    <div class="tab-content" id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>PHP, JavaScript, Kotlin, HTML, CSS, XML</li>
+        <li>Laravel, jQuery, Bootstrap, Flutter</li>
+        <li>MySQL, MSSQL, Oracle</li>
+        <li>UAT/FAT, documentation, support</li>
+      </ul>
+      <h2>Certificates</h2>
+      <ul>
+        <li>Laravel (Beginner–Master), 2023–2025</li>
+        <li>Mobile App Dev (Flutter, Kotlin)</li>
+        <li>Certified PHP & jQuery Developer</li>
+        <li>MBOT Professional Technologist (PT22100585)</li>
+      </ul>
+    </div>
+  </section>
+
   <script>
-    document.querySelector("form").addEventListener("submit", function (e) {
-      e.preventDefault();
-      const msg = document.getElementById("success-message");
-      msg.style.display = "block";
-      msg.style.opacity = 0;
-      setTimeout(() => {
-        msg.style.transition = "opacity 0.6s";
-        msg.style.opacity = 1;
-      }, 100);
-    });
+    function showTab(tabId) {
+      document.querySelectorAll('.tab-buttons button').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+      event.target.classList.add('active');
+    }
   </script>
 </body>
 </html>
