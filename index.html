@@ -78,6 +78,61 @@
       font-size: 1.25rem;
       color: #600a0a;
     }
+
+    .timeline-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.timeline-box {
+  flex: 1 1 45%;
+  background: #f9f9f9;
+  padding: 20px;
+  border-left: 5px solid #007BFF;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+.timeline-box h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 15px;
+}
+
+.timeline-item {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -9px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  background: #007BFF;
+  border-radius: 50%;
+}
+
+.timeline-date {
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.timeline-content {
+  line-height: 1.5;
+}
+
   </style>
 </head>
 <body>
@@ -105,45 +160,55 @@
   </div>
 
   <div id="workedu" class="tab-content hidden">
-    <div class="flex flex-col lg:flex-row gap-4">
-  <!-- Work Experience Timeline -->
-  <div class="w-full lg:w-1/2 bg-white p-4 shadow-md rounded-xl">
-    <h3 class="text-xl font-bold mb-4 border-b pb-2">Work Experience</h3>
-    <div class="space-y-6 border-l-4 border-blue-500 pl-4">
-      <div>
-        <p class="text-sm text-gray-500">2019 – Present</p>
-        <p class="font-bold text-blue-700">Selia Ekuiti Sdn Bhd</p>
-        <p>Senior Programmer cum Application Support</p>
+    <div class="timeline-container">
+  <!-- Work Experience -->
+  <div class="timeline-box">
+    <h3>Work Experience</h3>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">2019 – Present</div>
+        <div class="timeline-content">
+          <strong>Selia Ekuiti Sdn Bhd</strong><br>
+          Senior Programmer cum Application Support
+        </div>
       </div>
-      <div>
-        <p class="text-sm text-gray-500">2015 – 2019</p>
-        <p class="font-bold text-blue-700">Microcorp Sdn Bhd</p>
-        <p>Software Engineer</p>
+      <div class="timeline-item">
+        <div class="timeline-date">2015 – 2019</div>
+        <div class="timeline-content">
+          <strong>Microcorp Sdn Bhd</strong><br>
+          Software Engineer
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Education Timeline -->
-  <div class="w-full lg:w-1/2 bg-white p-4 shadow-md rounded-xl">
-    <h3 class="text-xl font-bold mb-4 border-b pb-2">Education</h3>
-    <div class="space-y-6 border-l-4 border-green-500 pl-4">
-      <div>
-        <p class="text-sm text-gray-500">Graduation: Nov 2024</p>
-        <p class="font-bold text-green-700">Universiti Teknologi Malaysia</p>
-        <p>Master of Software Engineering</p>
-        <p>CGPA: 4.00</p>
+  <!-- Education -->
+  <div class="timeline-box">
+    <h3>Education</h3>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">Nov 2024</div>
+        <div class="timeline-content">
+          <strong>Universiti Teknologi Malaysia</strong><br>
+          Master of Software Engineering<br>
+          CGPA: 4.00
+        </div>
       </div>
-      <div>
-        <p class="text-sm text-gray-500">Graduation: Oct 2015</p>
-        <p class="font-bold text-green-700">Universiti Teknikal Malaysia Melaka</p>
-        <p>Degree of Computer Science (Database Management)</p>
-        <p>CGPA: 3.16</p>
+      <div class="timeline-item">
+        <div class="timeline-date">Oct 2015</div>
+        <div class="timeline-content">
+          <strong>Universiti Teknikal Malaysia Melaka</strong><br>
+          Degree of Computer Science (Database Management)<br>
+          CGPA: 3.16
+        </div>
       </div>
-      <div>
-        <p class="text-sm text-gray-500">Graduation: 2009</p>
-        <p class="font-bold text-green-700">SMK Kelapa Sawit</p>
-        <p>Sijil Pelajaran Malaysia</p>
-        <p>Result: 1A+ 2A 2A- 5C+</p>
+      <div class="timeline-item">
+        <div class="timeline-date">2009</div>
+        <div class="timeline-content">
+          <strong>SMK Kelapa Sawit</strong><br>
+          Sijil Pelajaran Malaysia<br>
+          Result: 1A+ 2A 2A- 5C+
+        </div>
       </div>
     </div>
   </div>
