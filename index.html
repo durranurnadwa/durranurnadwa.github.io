@@ -1,314 +1,155 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Durra Nur Nadwa – Professional Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Durra Nur Nadwa | Portfolio</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
       padding: 0;
-      background: #f7f7f7;
+      background: #f9f9f9;
       color: #333;
     }
-
     header {
-      background: #800000;
+      background: #600a0a;
       color: white;
-      padding: 20px;
+      padding: 2rem;
       text-align: center;
     }
-
     .core-expertise {
       display: flex;
-      gap: 20px;
-      justify-content: center;
-      margin: 20px;
-      flex-wrap: wrap;
+      justify-content: space-around;
+      background: #fff;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
-
-    .expertise-box {
-      background: white;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      flex: 1;
-      min-width: 220px;
-      max-width: 300px;
+    .core-box {
+      background: #f0f0f0;
+      padding: 1rem;
+      border-radius: 8px;
+      width: 30%;
+      text-align: center;
     }
-
     .tabs {
-      margin: 30px;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      overflow: hidden;
+      margin: 2rem;
     }
-
     .tab-buttons {
       display: flex;
-      background: #e0e0e0;
+      margin-bottom: 1rem;
+      gap: 1rem;
     }
-
     .tab-buttons button {
-      flex: 1;
-      padding: 15px;
-      background: none;
+      padding: 0.75rem 1.5rem;
       border: none;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .tab-buttons button.active {
-      background: white;
-      border-bottom: 3px solid #800000;
-      color: #800000;
-    }
-
-    .tab-content {
-      display: none;
-      padding: 20px;
-    }
-
-    .tab-content.active {
-      display: block;
-    }
-
-    .section-title {
-      font-size: 18px;
-      font-weight: bold;
-      margin-top: 15px;
-    }
-
-    .section-content {
-      margin-top: 5px;
-    }
-
-    .timeline {
-      list-style: none;
-      padding: 0;
-      position: relative;
-    }
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 20px;
-      top: 0;
-      bottom: 0;
-      width: 2px;
       background: #ccc;
+      cursor: pointer;
+      border-radius: 4px;
     }
-    .timeline li {
-      position: relative;
-      padding-left: 60px;
-      margin-bottom: 40px;
-    }
-    .timeline-icon {
-      position: absolute;
-      left: 8px;
-      top: 0;
-      width: 25px;
-      height: 25px;
-      background: #007bff;
+    .tab-buttons button.active {
+      background: #600a0a;
       color: white;
-      border-radius: 50%;
-      text-align: center;
-      line-height: 25px;
-      font-size: 12px;
     }
-    .timeline-content {
-      background: #f9f9f9;
-      padding: 15px;
-      border-radius: 6px;
-      border-left: 5px solid #007bff;
-    }
-    .timeline-date {
-      font-size: 0.9em;
-      color: #666;
-      margin-top: 5px;
-    }
-
-    .dark-mode {
-      background-color: #121212 !important;
-      color: #ffffff !important;
-    }
-
-    .dark-mode .timeline-content {
-      background-color: #1e1e1e;
-      border-left-color: #90caf9;
-    }
-
-    .dark-mode .timeline-icon {
-      background: #90caf9;
-      color: #000;
-    }
-
-    .dark-mode a, .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4 {
-      color: #ffffff;
-    }
-
     .tab-content {
       display: none;
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
     }
-
     .tab-content.active {
       display: block;
     }
-
-    .tab-button.active {
-      background-color: #007bff;
-      color: white;
+    .timeline {
+      border-left: 3px solid #600a0a;
+      margin-left: 1rem;
+      padding-left: 1rem;
     }
-
-
+    .timeline-item {
+      margin-bottom: 1rem;
+    }
+    .timeline-item h4 {
+      margin: 0 0 0.25rem;
+    }
+    .section-title {
+      margin-top: 2rem;
+      font-size: 1.25rem;
+      color: #600a0a;
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Durra Nur Nadwa binti Roslaili 6688</h1>
-    <p>Senior Programmer</p>
-  </header>
 
-  <button id="darkModeToggle" class="btn btn-sm btn-outline-secondary">
-    <i class="fas fa-moon"></i> Toggle Dark Mode
-  </button>
-  <a href="assets/DurraNurNadwa_Resume.pdf" download class="btn btn-primary">
-    <i class="fas fa-download"></i> Download Resume
-  </a>
+<header>
+  <h1>Durra Nur Nadwa binti Roslaili</h1>
+  <p>Senior Programmer</p>
+</header>
 
+<section class="core-expertise">
+  <div class="core-box">Software Development</div>
+  <div class="core-box">Mobile App Development</div>
+  <div class="core-box">Technical Support & QA</div>
+</section>
 
-
-  <section class="core-expertise">
-    <div class="expertise-box">
-      <h3>Software Development</h3>
-      <p>Full SDLC experience, from requirements to deployment, with strong documentation and user training.</p>
-    </div>
-    <div class="expertise-box">
-      <h3>Programming & Frameworks</h3>
-      <p>PHP, JavaScript, Kotlin, Flutter, Laravel, jQuery, Bootstrap – proficient in web & mobile development.</p>
-    </div>
-    <div class="expertise-box">
-      <h3>Technical Support & QA</h3>
-      <p>UAT/FAT coordination, bug fixing, troubleshooting, and mentoring for smooth project handovers.</p>
-    </div>
-  </section>
-
-   <div class="tabs">
-    <button class="tab-button active" onclick="openTab(event, 'project')">Projects</button>
-    <button class="tab-button" onclick="openTab(event, 'workedu')">Work Exp & Edu</button>
-    <button class="tab-button" onclick="openTab(event, 'skills')">Skills & Certificates</button>
+<section class="tabs">
+  <div class="tab-buttons">
+    <button class="tab-btn active" onclick="showTab('project')">Project</button>
+    <button class="tab-btn" onclick="showTab('workedu')">Work Exp & Edu</button>
+    <button class="tab-btn" onclick="showTab('skills')">Skills & Certificate</button>
   </div>
 
-  <!-- Projects Tab -->
-  <div class="tab-content active" id="project">
-    <h2>Project Showcase</h2>
-    <p>Projects will be added here.</p>
+  <div id="project" class="tab-content active">
+    <p>Showcase of project works goes here...</p>
   </div>
 
-  <!-- Work and Education Tab -->
-  <div class="tab-content" id="workedu">
-    <h2>Work Experience</h2>
+  <div id="workedu" class="tab-content">
+    <div class="section-title">Work Experience</div>
     <div class="timeline">
       <div class="timeline-item">
-        <div class="timeline-date">2019 – Present</div>
-        <div class="timeline-content">
-          <h3>Senior Programmer</h3>
-          <h4>Selia Ekuiti Sdn Bhd</h4>
-          <p>Led internal system development, automation projects, UAT/FAT, training and documentation.</p>
-        </div>
+        <h4>Senior Programmer - Selia Ekuiti Sdn Bhd</h4>
+        <p>2019 - Present</p>
       </div>
       <div class="timeline-item">
-        <div class="timeline-date">2015 – 2019</div>
-        <div class="timeline-content">
-          <h3>Software Engineer</h3>
-          <h4>Microcorp Sdn Bhd</h4>
-          <p>Full-stack dev, debugging, team mentoring, client training, performance optimization.</p>
-        </div>
+        <h4>Software Engineer - Microcorp Sdn Bhd</h4>
+        <p>2015 - 2019</p>
       </div>
     </div>
-
-    <h2>Education</h2>
+    <div class="section-title">Education</div>
     <div class="timeline">
       <div class="timeline-item">
-        <div class="timeline-date">2022 – 2024</div>
-        <div class="timeline-content">
-          <h3>Master of Software Engineering</h3>
-          <h4>Universiti Teknologi Malaysia</h4>
-          <p>CGPA: 4.00 | Graduation: Nov 2024</p>
-        </div>
+        <h4>Universiti Teknologi Malaysia</h4>
+        <p>Master of Software Engineering (2024)</p>
       </div>
       <div class="timeline-item">
-        <div class="timeline-date">2011 – 2015</div>
-        <div class="timeline-content">
-          <h3>Bachelor of Computer Science (Database)</h3>
-          <h4>Universiti Teknikal Malaysia Melaka</h4>
-          <p>CGPA: 3.16 | Graduation: Oct 2015</p>
-        </div>
+        <h4>Universiti Teknikal Malaysia Melaka</h4>
+        <p>Bachelor of Computer Science (2015)</p>
       </div>
       <div class="timeline-item">
-        <div class="timeline-date">2004 – 2009</div>
-        <div class="timeline-content">
-          <h3>SPM</h3>
-          <h4>SMK Kelapa Sawit</h4>
-          <p>1A+ 2A 2A- 5C+ | Graduation: 2009</p>
-        </div>
+        <h4>SMK Kelapa Sawit</h4>
+        <p>SPM (2009)</p>
       </div>
     </div>
   </div>
 
-  <!-- Skills Tab -->
-  <div class="tab-content" id="skills">
-    <h2>Skills & Certificates</h2>
-    <ul>
-      <li>PHP, JavaScript, HTML, CSS, Flutter, Kotlin</li>
-      <li>Laravel, jQuery, Bootstrap</li>
-      <li>MySQL, MSSQL, Oracle</li>
-      <li>Certified PHP & jQuery Developer (2014)</li>
-      <li>Mobile Dev (Flutter), Android Pro, Laravel (2023–2025)</li>
-    </ul>
+  <div id="skills" class="tab-content">
+    <p>Skills and certifications info goes here...</p>
   </div>
 </section>
 
-  <script>
-    function showTab(tabId) {
-      document.querySelectorAll('.tab-buttons button').forEach(btn => btn.classList.remove('active'));
-      document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
-      document.getElementById(tabId).classList.add('active');
-      event.target.classList.add('active');
-    }
-
-    function openTab(evt, tabId) {
-      // Hide all tab contents
-      const tabContents = document.querySelectorAll(".tab-content");
-      tabContents.forEach(content => content.classList.remove("active"));
-
-      // Remove active class from all buttons
-      const tabButtons = document.querySelectorAll(".tab-button");
-      tabButtons.forEach(btn => btn.classList.remove("active"));
-
-      // Show selected tab
-      document.getElementById(tabId).classList.add("active");
-      evt.currentTarget.classList.add("active");
-    }
-
-    const toggleBtn = document.getElementById('darkModeToggle');
-    const body = document.body;
-
-    // Load mode from localStorage
-    if (localStorage.getItem('theme') === 'dark') {
-      body.classList.add('dark-mode');
-    }
-
-    toggleBtn.addEventListener('click', () => {
-      body.classList.toggle('dark-mode');
-      if (body.classList.contains('dark-mode')) {
-        localStorage.setItem('theme', 'dark');
-      } else {
-        localStorage.setItem('theme', 'light');
-      }
+<script>
+  function showTab(id) {
+    document.querySelectorAll('.tab-content').forEach(tab => {
+      tab.classList.remove('active');
     });
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.classList.remove('active');
+    });
+    document.getElementById(id).classList.add('active');
+    event.target.classList.add('active');
+  }
+</script>
 
-  </script>
 </body>
 </html>
