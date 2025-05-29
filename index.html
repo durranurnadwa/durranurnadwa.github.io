@@ -207,15 +207,17 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: flex-start;
   }
   .project-box {
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
-    width: 300px;
+    width: calc(25% - 15px); /* 4 boxes per row with gap */
     padding: 15px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+    box-sizing: border-box;
   }
   .project-box:hover {
     transform: translateY(-10px);
@@ -248,6 +250,22 @@
   }
   .project-desc li {
     margin-bottom: 5px;
+  }
+  /* Responsive for smaller screens */
+  @media (max-width: 1024px) {
+    .project-box {
+      width: calc(33.333% - 15px); /* 3 per row */
+    }
+  }
+  @media (max-width: 700px) {
+    .project-box {
+      width: calc(50% - 15px); /* 2 per row */
+    }
+  }
+  @media (max-width: 450px) {
+    .project-box {
+      width: 100%; /* 1 per row */
+    }
   }
   </style>
 </head>
