@@ -180,97 +180,81 @@
     </div>
   </section>
 
-  <section class="tabs">
-    <div class="tab-buttons">
-      <button class="active" onclick="showTab('project')">Projects</button>
-      <button onclick="showTab('experience')">Work Exp & Edu</button>
-      <button onclick="showTab('skills')">Skills & Certificates</button>
-    </div>
-    <div class="tab-content active" id="project">
-      <h2>Projects</h2>
-      <div class="section-title">KWSP REMS</div>
-      <div class="section-content">
-        Acted as SME for project module. Managed audits & repairs workflows, ensured compliance, and user training.
+   <div class="tabs">
+    <button class="tab-button active" onclick="openTab(event, 'project')">Projects</button>
+    <button class="tab-button" onclick="openTab(event, 'workedu')">Work Exp & Edu</button>
+    <button class="tab-button" onclick="openTab(event, 'skills')">Skills & Certificates</button>
+  </div>
+
+  <!-- Projects Tab -->
+  <div class="tab-content active" id="project">
+    <h2>Project Showcase</h2>
+    <p>Projects will be added here.</p>
+  </div>
+
+  <!-- Work and Education Tab -->
+  <div class="tab-content" id="workedu">
+    <h2>Work Experience</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">2019 – Present</div>
+        <div class="timeline-content">
+          <h3>Senior Programmer</h3>
+          <h4>Selia Ekuiti Sdn Bhd</h4>
+          <p>Led internal system development, automation projects, UAT/FAT, training and documentation.</p>
+        </div>
       </div>
-      <!-- Add more projects as needed -->
+      <div class="timeline-item">
+        <div class="timeline-date">2015 – 2019</div>
+        <div class="timeline-content">
+          <h3>Software Engineer</h3>
+          <h4>Microcorp Sdn Bhd</h4>
+          <p>Full-stack dev, debugging, team mentoring, client training, performance optimization.</p>
+        </div>
+      </div>
     </div>
 
-    <!-- Work Experience & Education Tab -->
-  <div class="tab-pane fade" id="work-edu" role="tabpanel" aria-labelledby="work-edu-tab">
-    <div class="container py-4">
-      <!-- Work Experience Timeline -->
-      <h3 class="mb-4">Work Experience</h3>
-      <ul class="timeline">
-        <li>
-          <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
-          <div class="timeline-content">
-            <h4>Senior Programmer cum Application Support</h4>
-            <p class="timeline-date">Selia Ekuiti Sdn Bhd | 2019 – Present</p>
-            <ul>
-              <li>Led automation projects and system improvements.</li>
-              <li>Handled UAT/FAT, documentation, and user training.</li>
-              <li>Supported cross-functional development and system delivery.</li>
-            </ul>
-          </div>
-        </li>
-        <li>
-          <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
-          <div class="timeline-content">
-            <h4>Software Engineer</h4>
-            <p class="timeline-date">Microcorp Sdn Bhd | 2015 – 2019</p>
-            <ul>
-              <li>Delivered full-cycle software development and upgrades.</li>
-              <li>Provided support, mentored juniors, and led training sessions.</li>
-            </ul>
-          </div>
-        </li>
-      </ul>
-
-      <!-- Education Timeline -->
-      <h3 class="mt-5 mb-4">Education</h3>
-      <ul class="timeline">
-        <li>
-          <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
-          <div class="timeline-content">
-            <h4>Universiti Teknologi Malaysia</h4>
-            <p class="timeline-date">Master of Software Engineering<br>Graduation: November 2024 | CGPA: 4.00</p>
-          </div>
-        </li>
-        <li>
-          <div class="timeline-icon"><i class="fas fa-graduation-cap"></i></div>
-          <div class="timeline-content">
-            <h4>Universiti Teknikal Malaysia Melaka</h4>
-            <p class="timeline-date">Degree in Computer Science (Database Management)<br>Graduation: October 2015 | CGPA: 3.16</p>
-          </div>
-        </li>
-        <li>
-          <div class="timeline-icon"><i class="fas fa-school"></i></div>
-          <div class="timeline-content">
-            <h4>SMK Kelapa Sawit</h4>
-            <p class="timeline-date">Sijil Pelajaran Malaysia (SPM)<br>Graduation: 2009 | Result: 1A+ 2A 2A- 5C+</p>
-          </div>
-        </li>
-      </ul>
+    <h2>Education</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">2022 – 2024</div>
+        <div class="timeline-content">
+          <h3>Master of Software Engineering</h3>
+          <h4>Universiti Teknologi Malaysia</h4>
+          <p>CGPA: 4.00 | Graduation: Nov 2024</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2011 – 2015</div>
+        <div class="timeline-content">
+          <h3>Bachelor of Computer Science (Database)</h3>
+          <h4>Universiti Teknikal Malaysia Melaka</h4>
+          <p>CGPA: 3.16 | Graduation: Oct 2015</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2004 – 2009</div>
+        <div class="timeline-content">
+          <h3>SPM</h3>
+          <h4>SMK Kelapa Sawit</h4>
+          <p>1A+ 2A 2A- 5C+ | Graduation: 2009</p>
+        </div>
+      </div>
     </div>
   </div>
 
-    <div class="tab-content" id="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>PHP, JavaScript, Kotlin, HTML, CSS, XML</li>
-        <li>Laravel, jQuery, Bootstrap, Flutter</li>
-        <li>MySQL, MSSQL, Oracle</li>
-        <li>UAT/FAT, documentation, support</li>
-      </ul>
-      <h2>Certificates</h2>
-      <ul>
-        <li>Laravel (Beginner–Master), 2023–2025</li>
-        <li>Mobile App Dev (Flutter, Kotlin)</li>
-        <li>Certified PHP & jQuery Developer</li>
-        <li>MBOT Professional Technologist (PT22100585)</li>
-      </ul>
-    </div>
-  </section>
+  <!-- Skills Tab -->
+  <div class="tab-content" id="skills">
+    <h2>Skills & Certificates</h2>
+    <ul>
+      <li>PHP, JavaScript, HTML, CSS, Flutter, Kotlin</li>
+      <li>Laravel, jQuery, Bootstrap</li>
+      <li>MySQL, MSSQL, Oracle</li>
+      <li>Certified PHP & jQuery Developer (2014)</li>
+      <li>Mobile Dev (Flutter), Android Pro, Laravel (2023–2025)</li>
+    </ul>
+  </div>
+</section>
 
   <script>
     function showTab(tabId) {
